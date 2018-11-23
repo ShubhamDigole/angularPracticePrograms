@@ -11,14 +11,14 @@ export class DirectivessComponent implements OnInit {
    
   constructor() {  
 
-    
+
    this.employee= [
      
-    { code: 101, name : 'shubham', job : 'Angular Developer' },
-    { code: 102, name : 'Anuja', job : 'Android Developer' },
-    { code: 107, name : 'Shifa', job : 'Java Developer' },
-    { code: 109, name : 'Alia', job : 'Software Tester' },
-    { code: 105, name : 'Vasundhara', job : 'Calculator' }                
+    { code: 101, name : 'shubham', job : 'Angular Developer', city : 'Latur' },
+    { code: 102, name : 'Anuja', job : 'Android Developer', city : 'Pune' },
+    { code: 107, name : 'Shifa', job : 'Java Developer', city : 'Karad' },
+    { code: 109, name : 'Alia', job : 'Software Tester', city : 'Kolhapur' },
+    { code: 105, name : 'Vasundhara', job : 'Calculator', city : 'Pune' }                
   
   
   

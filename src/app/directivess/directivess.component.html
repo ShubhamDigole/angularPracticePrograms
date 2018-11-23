@@ -14,10 +14,21 @@
 
 
     </tr>
-    <tr  *ngFor = "let data of employee; let i = index">
+    <tr  *ngFor = "let data of employee; let i = index; let isFirst = first; let isLast = last; let isOdd = odd; let isEven = even ">
         <td>{{i + 1}}</td>
-        <td>{{data.code}}</td>
-        <td>{{data.name}}</td>
-        <td>{{data.job}}</td>
+        <td>{{ data.code }}</td>
+        <td>{{ data.name }}</td>
+        <td>{{data.job }}</td>
+        <td>{{ isFirst }}</td>
+        <td>{{ isLast }}</td>
+        <td>{{ isOdd }}</td>
+        <td>{{ isEven }}</td>
     </tr>    
 </table>
+
+<!-- code for ng sweetch -->
+<ul *ngFor = 'let data of employee' [ngSwitch]="data.city">
+    <li *ngSwitchCase="'Pune'" class="primary"> {{ data.city }} </li>    
+    <li *ngSwitchCase="'Karad'" class="success"> {{ data.city }} </li> 
+    <li *ngSwitchCase="'Latur'" class="danger"> {{ data.city }} </li>  
+</ul>
