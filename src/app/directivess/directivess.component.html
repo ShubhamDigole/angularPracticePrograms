@@ -2,3 +2,22 @@
 <h1 *ngIf ='!status'>Condition is false</h1>
 
 <button (click) = "test()">test</button>
+
+<!-- Using ng for directive -->
+<table border="1" cellspacing="0" cellpadding="5" style="text-align:center">
+    
+    <tr>
+        <td>Index</td>
+        <td>Code</td>
+        <td>Name</td>
+        <td>JOB</td>
+
+
+    </tr>
+    <tr  *ngFor = "let data of employee; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{data.code}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.job}}</td>
+    </tr>    
+</table>
