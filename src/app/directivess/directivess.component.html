@@ -1,5 +1,5 @@
 <h1 *ngIf ='status'>Condition is True</h1>
-<h1 *ngIf ='!status'>Condition is false</h1>
+<h1 *ngIf ='!status'>Condition is False</h1>
 
 <button (click) = "test()">test</button>
 
@@ -32,3 +32,12 @@
     <li *ngSwitchCase="'Karad'" class="success"> {{ data.city }} </li> 
     <li *ngSwitchCase="'Latur'" class="danger"> {{ data.city }} </li>  
 </ul>
+<table border="0"  style="width: 300px">
+<tr *ngFor = 'let data of employee' [ngSwitch]="data.city">
+    <td *ngSwitchCase= "'Kolhapur'" class="primary"  style="background:green; padding: 10px; height:20px;"> {{ data.city }} {{data.name}}</td>    
+    
+    <td *ngSwitchCase="'Karad'" class="success" style="background:white">  <img src="../assets/ashoka.jpg" alt="" style="padding:0px; height: 30px; margin-left:120px "></td> 
+    <td *ngSwitchCase="'Latur'" class="danger"  style="background:rgb(211, 100, 9); padding: 10px;"> {{ data.city }} </td>  
+</tr>
+
+</table>

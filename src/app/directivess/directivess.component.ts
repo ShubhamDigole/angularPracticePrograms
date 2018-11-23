@@ -18,7 +18,7 @@ export class DirectivessComponent implements OnInit {
     { code: 102, name : 'Anuja', job : 'Android Developer', city : 'Pune' },
     { code: 107, name : 'Shifa', job : 'Java Developer', city : 'Karad' },
     { code: 109, name : 'Alia', job : 'Software Tester', city : 'Kolhapur' },
-    { code: 105, name : 'Vasundhara', job : 'Calculator', city : 'Pune' }                
+                 
   
   
   
