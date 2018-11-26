@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-dream-app';
   power = 10;
+  powers = '10-06-1996';
+  today: number = Date.now();
   constructor(){
 
     console.log(this.title);

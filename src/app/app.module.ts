@@ -9,6 +9,8 @@ import { WelcomeModule } from './welcomeModule/welcome.module';
 import { ParentComponent } from './parentchild/parent.component';
 import { ChildComponent } from './parentchild/child.component';
 import { DirectivessComponent } from './directivess/directivess.component';
+import { DirDirective } from './dir.directive';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { DirectivessComponent } from './directivess/directivess.component';
     NewcompComponent,
     ParentComponent,
     ChildComponent,
-    DirectivessComponent
+    DirectivessComponent,
+    DirDirective,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,

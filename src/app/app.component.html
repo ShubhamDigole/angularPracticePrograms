@@ -1,12 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title | lowercase }}!
+    Welcome to {{ title | lowercase }}!<br>
+
+     {{ power | currency:'USD' }}
+     <br>
+     {{ today | date:'medium' }}
+
   </h1>
   
 </div>
+
+<p>Super power boost: {{2 | exponentialStrength: 2}}</p>
 Normal power: <input [(ngModel)]="title">
 <!-- <appdata></appdata> -->
 <app-parent></app-parent>
 
 <app-directivess></app-directivess>
+
+<p appDir>shubham</p>

@@ -38,9 +38,7 @@ export class DirectivessComponent implements OnInit {
       this.status = true;
     }
     else{  
-
       this.status = false;
-
     }
   }
 
