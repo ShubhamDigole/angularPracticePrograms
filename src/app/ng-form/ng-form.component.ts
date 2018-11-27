@@ -11,5 +11,12 @@ export class NgFormComponent implements OnInit {
 
   ngOnInit() {
   }
+  value: any;
+
+  log(contactForm) {
+      this.value = contactForm;
+      console.log(contactForm);
+  }
+
 
 }
