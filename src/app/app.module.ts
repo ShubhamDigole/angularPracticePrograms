@@ -11,6 +11,9 @@ import { ChildComponent } from './parentchild/child.component';
 import { DirectivessComponent } from './directivess/directivess.component';
 import { DirDirective } from './dir.directive';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { TableComponent } from './table/table.component';
+import { DiscoutPipe } from './discout.pipe';
+import { NgFormComponent } from './ng-form/ng-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
     ChildComponent,
     DirectivessComponent,
     DirDirective,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    TableComponent,
+    DiscoutPipe,
+    NgFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,56 @@
+<div class="background">
+  <div class="form">
+
+    <h2>BILL</h2>
+    Name:<br>
+    <input #name type="text" required value="{{ this.data[this.editId].name }}">
+    <br>Price: <br>
+    <input type="number" #price required value="{{ this.data[this.editId].price }}">
+
+    <br>Discount: <br>
+    <input type="number" #disc value="{{ this.data[this.editId].disc }}">
+
+    <br>
+    <button class="btn btn-primary" (click)="add(name.value,price.value,disc.value)">Add</button><br> 
+    <button class="btn btn-primary" [disabled] ='!edits' (click)="editVal(name.value,price.value,disc.value)">Edit</button>
+
+
+  </div>
+</div>
+<input #min id="search" value="0" type="number">
+<input #max id="search" value="100" type="number">
+<button (click) = "search(min.value, max.value)" class="btn btn-primary">Search</button>
+<div class="table-responsive">
+  <table border="1" class="table ">
+    <tr>
+
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Discount Per</th>
+      <th>Discount</th>
+      <th>Total</th>
+      <th>Edit </th>
+      <th>Delete</th>
+    </tr>
+    <tbody *ngFor="let val of data; let i = index" >
+      
+      <tr *ngIf='val.disc >= list && val.disc < list2 '>
+      <td>{{ i + 1 }}</td>
+      <td>{{val.name}}</td>
+      <td>{{val.price | currency: 'INR' }}</td>
+      <td>{{ val.disc}} %</td>
+      <td>{{ val.price | discout : val.disc | currency: 'INR' }}</td>
+      <td> {{val.price - (val.price | discout : val.disc) | currency: 'INR' }}</td>
+      <button class="btn btn-success" (click) = "show(i)">Edit</button>
+      <td><button (click)="del(i)" class="btn btn-danger">X</button></td>
+    </tr>
+    </tbody>
+
+  </table>
+
+  
+ 
+  
+
+</div>
